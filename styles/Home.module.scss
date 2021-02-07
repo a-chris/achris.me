@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+
+  flex-direction: column;
+
+  @media (min-width: 400px) {
+    flex-direction: row;
+  }
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  @media (min-width: 1400px) {
+    padding: 0 20%;
+  }
+
+  @media (min-width: 400px) {
+    padding: 0 10%;
+  }
+}
