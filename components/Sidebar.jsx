@@ -1,5 +1,28 @@
 import styled from "@emotion/styled";
 import React from "react";
+import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
+import StyledLink from "./StyledLink";
+
+const CONTACTS = [
+  {
+    href: "https://github.com/a-chris",
+    text: "GitHub",
+    icon: "resources/icons/github.svg",
+    iconPosition: "before",
+  },
+  {
+    href: "https://www.linkedin.com/in/a-chris",
+    text: "Linkedin",
+    icon: "resources/icons/linkedin.svg",
+    iconPosition: "before",
+  },
+  {
+    href: "https://medium.com/@a.christian.toscano",
+    text: "Medium",
+    icon: "resources/icons/medium.svg",
+    iconPosition: "before",
+  },
+];
 
 export default function Sidebar() {
   return (
@@ -7,24 +30,11 @@ export default function Sidebar() {
       <MyName>CHRISTIAN TOSCANO</MyName>
       <MyPicture src="resources/my_pic.png" />
       <ContactsDiv>
-        <StyledHtmlLink href="https://github.com/a-chris" target="_blank">
-          <ContactLinkIcon src="resources/github.svg" />
-          GitHub
-        </StyledHtmlLink>
-        <StyledHtmlLink
-          href="https://www.linkedin.com/in/a-chris/"
-          target="_blank"
-        >
-          <ContactLinkIcon src="resources/linkedin.svg" />
-          Linkedin
-        </StyledHtmlLink>
-        <StyledHtmlLink
-          href="https://medium.com/@a.christian.toscano"
-          target="_blank"
-        >
-          <ContactLinkIcon src="resources/medium.svg" />
-          Medium
-        </StyledHtmlLink>
+        {CONTACTS.map((c, index) => (
+          <UnderlineHoverAnimation key={index}>
+            <StyledLink {...c} />
+          </UnderlineHoverAnimation>
+        ))}
       </ContactsDiv>
     </SidebarDiv>
   );
@@ -40,21 +50,31 @@ const SidebarDiv = styled.div`
   width: 100%;
 
   @media (min-width: 400px) {
+    // fixed sidebar settings
+    position: fixed;
+    height: 100%;
     width: 35%;
+    top: 0;
+    left: 0;
   }
 `;
 
 const MyName = styled.h2`
-  font-size: xxx-large;
   text-align: center;
+
+  font-size: xx-large;
+
+  @media (min-width: 400px) {
+    font-size: xxx-large;
+  }
 `;
 
 const MyPicture = styled.img`
-  width: 150px;
+  width: 110px;
   border-radius: 100%;
 
   @media (min-width: 400px) {
-    width: 200px;
+    width: 180px;
     filter: grayscale(1);
     transition: filter 0.5s;
 
@@ -72,7 +92,6 @@ const ContactsDiv = styled.div`
   flex-direction: row;
 
   @media (min-width: 400px) {
-    width: 35%;
     flex-direction: column;
   }
 

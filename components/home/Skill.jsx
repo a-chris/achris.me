@@ -4,7 +4,7 @@ import React from "react";
 export default function Skill({ name, icon }) {
   return (
     <SkillDiv>
-      <SkillIcon src={`resources/${icon}`} />
+      <SkillIcon src={`resources/icons/${icon}`} />
       <SkillName>{name}</SkillName>
     </SkillDiv>
   );

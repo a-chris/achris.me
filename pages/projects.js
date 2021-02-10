@@ -1,7 +1,8 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
+import ContentWrapper from "../components/ContentWrapper";
+import Project from "../components/projects/Project";
 import Sidebar from "../components/Sidebar";
-import { MY_NAME } from "../contents";
+import { MY_NAME, PROJECTS } from "../contents";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -14,17 +15,12 @@ export default function Home() {
 
       <div className={styles.container}>
         <Sidebar />
-
-        <main className={styles.main}>
-          <Navbar />
-
-          {/* <div className={styles.content} style={{ padding: "0 10%" }}>
-            {PROJECTS.map((p, index) => (
-              <Project key={index} {...p} isOdd={index % 2} />
-            ))}
-          </div> */}
-          <WorkInProgress />
-        </main>
+        <ContentWrapper>
+          {PROJECTS.map((p, index) => (
+            <Project key={index} {...p} isOdd={index % 2} />
+          ))}
+          {/* <WorkInProgress /> */}
+        </ContentWrapper>
       </div>
 
       <footer className={styles.footer}></footer>

@@ -1,15 +1,17 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
 import Divider from "./Divider";
 
-export default function Navbar(props) {
+export default function Navbar() {
   const router = useRouter();
 
   return (
-    <div style={{ padding: "0 30px" }}>
-      <NavbarDiv {...props}>
+    <NavbarDiv>
+      <NavbarLinksDiv>
         <NavbarLink
           text="HOME"
           href="/"
@@ -20,32 +22,55 @@ export default function Navbar(props) {
           href="/projects"
           isCurrentPage={router.pathname === "/projects"}
         />
-      </NavbarDiv>
+      </NavbarLinksDiv>
       <Divider />
-    </div>
+    </NavbarDiv>
   );
 }
 
 function NavbarLink({ text, href, isCurrentPage }) {
   return (
-    <Link href={href}>
-      <StyledHtmlLink isCurrentPage={isCurrentPage}>{text}</StyledHtmlLink>
-    </Link>
+    <UnderlineHoverAnimation>
+      <motion.div whileTap={{ scale: 0.9 }}>
+        <Link href={href}>
+          <StyledHtmlLink isCurrentPage={isCurrentPage}>{text}</StyledHtmlLink>
+        </Link>
+      </motion.div>
+    </UnderlineHoverAnimation>
   );
 }
 
 const NavbarDiv = styled.div`
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  padding: 0 10px;
+
+  @media (min-width: 400px) {
+    padding: 0 30px;
+  }
 `;
 
-const StyledHtmlLink = styled.a((props) => ({
+const NavbarLinksDiv = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  height: 50px;
+
+  @media (min-width: 400px) {
+    justify-content: flex-end;
+    height: 80px;
+  }
+`;
+
+const StyledHtmlLink = styled.a(({ isCurrentPage }) => ({
   margin: "0 20px",
-  fontSize: "24px",
   color: "black",
   transition: "font-weight 0.5s",
-  fontWeight: props.isCurrentPage && "bold",
+  fontWeight: isCurrentPage && "bold",
+
+  fontSize: "20px",
+
+  "@media (min-width: 400px)": {
+    fontSize: "24px",
+  },
 }));

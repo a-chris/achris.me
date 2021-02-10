@@ -4,7 +4,7 @@ import React from "react";
 export default function Language({ language }) {
   return (
     <LanguageDiv>
-      <LanguageIcon src={`resources/${language.icon}`} />
+      <LanguageIcon src={`resources/icons/${language.icon}`} />
       <LanguageName>{language.name}</LanguageName>
     </LanguageDiv>
   );
