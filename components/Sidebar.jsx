@@ -57,6 +57,10 @@ const SidebarDiv = styled.div`
     top: 0;
     left: 0;
   }
+
+  @media (min-width: 1400px) {
+    width: 30%;
+  }
 `;
 
 const MyName = styled.h2`

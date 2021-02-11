@@ -21,4 +21,8 @@ const Main = styled.main`
 
 const ContentDiv = styled.main`
   padding: 0 5%;
+
+  @media (min-width: 1400px) {
+    padding: 0 15%;
+  }
 `;

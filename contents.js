@@ -4,6 +4,37 @@ export const FRONT_DESCRIPTION = `Ciao! Io sono Christian, ho 24 anni, sono estr
 Mi piace essere aggiornato sulle nuove tecnologie per avere un bagaglio di conoscenze che mi permetta di risolvere ogni tipo di problema. 
 Sto cercando un'azienda in cui poter crescere e fare la differenza.`;
 
+export const TIMELINE = [
+  {
+    title: "Ottobre 2020 - Attuale",
+    cardTitle: "Lab51 srl",
+    content: ["React Developer"],
+  },
+  {
+    title: "Aprile 2019 - Ottobre 2020",
+    cardTitle: "Mango Mobile Solutions",
+    content: [
+      "Full Stack Developer (React, Spring MVC)",
+      "Android Developer",
+      "DevOps",
+    ],
+  },
+  {
+    title: "Marzo 2019",
+    cardTitle: "Laura Triennale in Ing. e Scienze Informatiche",
+    content: ["Universita' di Bologna"],
+  },
+  {
+    title: "Novembre 2016",
+    cardTitle: "Trasferimento all'Universita' di Bologna",
+  },
+  {
+    title: "Settembre 2015",
+    cardTitle: "Iscrizione al corso di Scienze Informatiche",
+    content: ["Universita' di Messina"],
+  },
+];
+
 export const SKILLS = [
   {
     name: "Applicazioni web in React e Next.js (SPA, PWA, SSR)",

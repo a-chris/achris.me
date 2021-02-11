@@ -59,21 +59,23 @@ const FrontDescription = styled.p`
   text-align: justify;
 
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.7;
   margin: 50px 20px;
 
   @media (min-width: 400px) {
     font-size: 22px;
     margin: 100px 50px;
   }
+
+  @media (min-width: 1400px) {
+    line-height: 2;
+    margin: 100px 100px;
+  }
 `;
 
 const SkillsDiv = styled.div`
-  margin: 0 20px;
-
-  @media (min-width: 400px) {
-    margin: 0 50px;
-  }
+  width: fit-content;
+  margin: 0 auto;
 `;
 
 const LanguagesDiv = styled.div`
