@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import Head from "next/head";
+import ContentWrapper from "../components/ContentWrapper";
 import Language from "../components/home/Language";
 import SectionTitle from "../components/home/SectionTitle";
 import Skill from "../components/home/Skill";
 import Timeline from "../components/home/Timeline";
-import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { FRONT_DESCRIPTION, LANGUAGES, MY_NAME, SKILLS } from "../contents";
 import styles from "../styles/Home.module.scss";
@@ -20,38 +20,34 @@ export default function Home() {
       <div className={styles.container}>
         <Sidebar />
 
-        <main className={styles.main}>
-          <Navbar />
+        <ContentWrapper>
+          <Section>
+            <FrontDescription>{FRONT_DESCRIPTION}</FrontDescription>
+          </Section>
 
-          <div className={styles.content}>
-            <Section>
-              <FrontDescription>{FRONT_DESCRIPTION}</FrontDescription>
-            </Section>
+          <Section>
+            <SectionTitle text="Il mio percorso" />
+            <Timeline />
+          </Section>
 
-            <Section>
-              <SectionTitle text="Il mio percorso" />
-              <Timeline />
-            </Section>
+          <Section>
+            <SectionTitle text="Competenze" />
+            <SkillsDiv>
+              {SKILLS.map((s, index) => (
+                <Skill key={index} {...s} />
+              ))}
+            </SkillsDiv>
+          </Section>
 
-            <Section>
-              <SectionTitle text="Competenze" />
-              <SkillsDiv>
-                {SKILLS.map((s, index) => (
-                  <Skill key={index} {...s} />
-                ))}
-              </SkillsDiv>
-            </Section>
-
-            <Section>
-              <SectionTitle text="Linguaggi di programmazione" />
-              <LanguagesDiv>
-                {LANGUAGES.map((lang, index) => (
-                  <Language key={index} language={lang} />
-                ))}
-              </LanguagesDiv>
-            </Section>
-          </div>
-        </main>
+          <Section>
+            <SectionTitle text="Linguaggi di programmazione" />
+            <LanguagesDiv>
+              {LANGUAGES.map((lang, index) => (
+                <Language key={index} language={lang} />
+              ))}
+            </LanguagesDiv>
+          </Section>
+        </ContentWrapper>
       </div>
 
       <footer className={styles.footer}></footer>

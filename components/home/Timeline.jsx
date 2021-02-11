@@ -47,8 +47,8 @@ export default function Timeline(props) {
       <Chrono hideControls mode="VERTICAL" theme={theme} items={items}>
         {items.map((item) => (
           <TimelineContent>
-            {item.content?.map((c) => (
-              <p>{c}</p>
+            {item.content?.map((c, index) => (
+              <p key={index}>{c}</p>
             ))}
           </TimelineContent>
         ))}
