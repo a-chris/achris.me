@@ -12,10 +12,10 @@ export default function UnderlineHoverAnimation({ children }) {
       {children}
       <motion.div
         style={{ height: 2, backgroundColor: "black", margin: "0 auto" }}
-        animate={{ width: isHover ? 100 : 0, scaleX: 1.2 }}
+        animate={{ width: isHover ? "100%" : 0 }}
         transition={{
           type: "spring",
-          stiffness: 100,
+          stiffness: 50,
           damping: 20,
         }}
       />
