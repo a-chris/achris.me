@@ -13,7 +13,7 @@ const theme = {
 
 export default function Timeline(props) {
   return (
-    <div>
+    <TimelineDiv>
       <Chrono hideControls mode="VERTICAL" theme={theme} items={TIMELINE}>
         {TIMELINE.map((item, index) => (
           <TimelineContent key={index}>
@@ -23,9 +23,15 @@ export default function Timeline(props) {
           </TimelineContent>
         ))}
       </Chrono>
-    </div>
+    </TimelineDiv>
   );
 }
+
+const TimelineDiv = styled.div`
+  @media (min-width: 1000px) {
+    margin-right: 12%;
+  }
+`;
 
 const TimelineContent = styled.div`
   width: 100%;

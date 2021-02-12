@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { MY_NAME } from "../contents";
 import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
 import StyledLink from "./StyledLink";
 
@@ -27,7 +28,7 @@ const CONTACTS = [
 export default function Sidebar() {
   return (
     <SidebarDiv>
-      <MyName>CHRISTIAN TOSCANO</MyName>
+      <MyName>{MY_NAME}</MyName>
       <MyPicture src="resources/my_pic.png" />
       <ContactsDiv>
         {CONTACTS.map((c, index) => (
