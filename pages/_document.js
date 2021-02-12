@@ -12,7 +12,7 @@ export default class CustomDocument extends Document {
             href="/fonts/Inconsolata.ttf"
             as="font"
             type="font/ttf"
-            crossorigin=""
+            crossOrigin=""
           />
         </Head>
         <body>

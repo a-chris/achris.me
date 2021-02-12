@@ -1,4 +1,12 @@
-export const MY_NAME = "Christian Toscano";
+import LinkWithIcon from "./components/LinkWithIcon";
+
+export const MY_NAME = (
+  <>
+    Christian
+    <br />
+    Toscano
+  </>
+);
 
 export const FRONT_DESCRIPTION = `Ciao! Io sono Christian, ho 24 anni, sono estremamente curioso e appassionato di informatica in ogni sua forma. 
 Mi piace essere aggiornato sulle nuove tecnologie per avere un bagaglio di conoscenze che mi permetta di risolvere ogni tipo di problema. 
@@ -7,12 +15,26 @@ Sto cercando un'azienda in cui poter crescere e fare la differenza.`;
 export const TIMELINE = [
   {
     title: "Ottobre 2020 - Attuale",
-    cardTitle: "Lab51 srl",
+    cardTitle: (
+      <LinkWithIcon
+        text="Lab51 srl"
+        href="https://lab51.it"
+        icon="resources/icons/link.svg"
+        iconPosition="after"
+      />
+    ),
     content: ["React Developer"],
   },
   {
     title: "Aprile 2019 - Ottobre 2020",
-    cardTitle: "Mango Mobile Solutions",
+    cardTitle: (
+      <LinkWithIcon
+        text="Mango Mobile Solutions"
+        href="https://mangomobi.com"
+        icon="resources/icons/link.svg"
+        iconPosition="after"
+      />
+    ),
     content: [
       "Full Stack Developer (React, Spring MVC)",
       "Android Developer",
