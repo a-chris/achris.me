@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import StyledLink from "../StyledLink";
+import LinkWithIcon from "../LinkWithIcon";
 
 export default function Project({
   name,
@@ -28,7 +28,7 @@ export default function Project({
           <ProjectTitle>{name}</ProjectTitle>
         </ProjectNameDiv>
         {gitHub && (
-          <StyledLink
+          <LinkWithIcon
             href={gitHub}
             text="Visita su GitHub"
             icon="resources/icons/github.svg"
@@ -59,6 +59,7 @@ export default function Project({
 }
 
 const ProjectTitle = styled.h3`
+  text-transform: uppercase;
   font-size: 24px;
   margin: 5px 0;
 `;

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import { MY_NAME } from "../contents";
 import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
-import StyledLink from "./StyledLink";
+import LinkWithIcon from "./LinkWithIcon";
 
 const CONTACTS = [
   {
@@ -33,7 +33,7 @@ export default function Sidebar() {
       <ContactsDiv>
         {CONTACTS.map((c, index) => (
           <UnderlineHoverAnimation key={index}>
-            <StyledLink {...c} />
+            <LinkWithIcon {...c} />
           </UnderlineHoverAnimation>
         ))}
       </ContactsDiv>

@@ -29,7 +29,7 @@ export default function Timeline(props) {
 
 const TimelineDiv = styled.div`
   @media (min-width: 1000px) {
-    margin-right: 12%;
+    margin-right: 10%;
   }
 `;
 

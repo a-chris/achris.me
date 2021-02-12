@@ -30,13 +30,13 @@ export default function Navbar() {
 
 function NavbarLink({ text, href, isCurrentPage }) {
   return (
-    <UnderlineHoverAnimation>
-      <motion.div whileTap={{ scale: 0.9 }}>
+    <motion.div whileTap={{ scale: 0.9 }}>
+      <UnderlineHoverAnimation>
         <Link href={href}>
           <StyledHtmlLink isCurrentPage={isCurrentPage}>{text}</StyledHtmlLink>
         </Link>
-      </motion.div>
-    </UnderlineHoverAnimation>
+      </UnderlineHoverAnimation>
+    </motion.div>
   );
 }
 
