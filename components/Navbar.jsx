@@ -32,7 +32,7 @@ function NavbarLink({ text, href, isCurrentPage }) {
   return (
     <motion.div whileTap={{ scale: 0.9 }}>
       <UnderlineHoverAnimation>
-        <Link href={href}>
+        <Link passHref href={href}>
           <StyledHtmlLink isCurrentPage={isCurrentPage}>{text}</StyledHtmlLink>
         </Link>
       </UnderlineHoverAnimation>

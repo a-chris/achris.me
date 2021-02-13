@@ -1,30 +1,18 @@
-import Head from "next/head";
-import ContentWrapper from "../components/ContentWrapper";
+import FadeIn from "../components/animations/FadeIn";
+import PageWrapper from "../components/PageWrapper";
 import Project from "../components/projects/Project";
-import Sidebar from "../components/Sidebar";
-import { MY_NAME, PROJECTS } from "../contents";
-import styles from "../styles/Home.module.scss";
+import { PROJECTS } from "../contents";
 
 export default function Home() {
   return (
-    <div className={styles.root}>
-      <Head>
-        <title>{MY_NAME}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className={styles.container}>
-        <Sidebar />
-        <ContentWrapper>
-          {PROJECTS.map((p, index) => (
-            <Project key={index} {...p} isOdd={index % 2} />
-          ))}
-          {/* <WorkInProgress /> */}
-        </ContentWrapper>
-      </div>
-
-      <footer className={styles.footer}></footer>
-    </div>
+    <PageWrapper>
+      {PROJECTS.map((p, index) => (
+        <FadeIn key={index}>
+          <Project {...p} isOdd={index % 2} />
+        </FadeIn>
+      ))}
+      {/* <WorkInProgress /> */}
+    </PageWrapper>
   );
 }
 

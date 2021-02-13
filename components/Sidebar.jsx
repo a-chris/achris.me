@@ -28,7 +28,11 @@ const CONTACTS = [
 export default function Sidebar() {
   return (
     <SidebarDiv>
-      <MyName>{MY_NAME}</MyName>
+      <MyName>
+        {MY_NAME.split(" ").map((word, index) => (
+          <div key={index}>{word}</div>
+        ))}
+      </MyName>
       <MyPicture src="resources/my_pic.png" />
       <ContactsDiv>
         {CONTACTS.map((c, index) => (
@@ -43,25 +47,11 @@ export default function Sidebar() {
 
 const SidebarDiv = styled.div`
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-content: center;
   align-items: center;
   background-color: #c8d0d7;
-
-  width: 100%;
-
-  @media (min-width: 400px) {
-    // fixed sidebar settings
-    position: fixed;
-    height: 100%;
-    width: 35%;
-    top: 0;
-    left: 0;
-  }
-
-  @media (min-width: 1400px) {
-    width: 30%;
-  }
 `;
 
 const MyName = styled.h2`
