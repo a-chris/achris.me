@@ -1,12 +1,6 @@
 import LinkWithIcon from "./components/LinkWithIcon";
 
-export const MY_NAME = (
-  <>
-    Christian
-    <br />
-    Toscano
-  </>
-);
+export const MY_NAME = "Christian Toscano";
 
 export const FRONT_DESCRIPTION = `Ciao! Io sono Christian, ho 24 anni, sono estremamente curioso e appassionato di informatica in ogni sua forma. 
 Mi piace essere aggiornato sulle nuove tecnologie per avere un bagaglio di conoscenze che mi permetta di risolvere ogni tipo di problema. 
