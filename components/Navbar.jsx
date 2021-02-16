@@ -43,7 +43,7 @@ function NavbarLink({ text, href, isCurrentPage }) {
 const NavbarDiv = styled.div`
   padding: 0 10px;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     padding: 0 30px;
   }
 `;
@@ -56,7 +56,7 @@ const NavbarLinksDiv = styled.div`
   justify-content: center;
   height: 50px;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     justify-content: flex-end;
     height: 80px;
   }
@@ -70,7 +70,7 @@ const StyledHtmlLink = styled.a(({ isCurrentPage }) => ({
 
   fontSize: "20px",
 
-  "@media (min-width: 400px)": {
+  "@media (min-width: 450px)": {
     fontSize: "24px",
   },
 }));

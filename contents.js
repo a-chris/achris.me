@@ -80,7 +80,7 @@ export const LANGUAGES = [
 export const PROJECTS = [
   {
     name: "Peffect Bookmarks",
-    description: `Stanco del bookmarks manager di Google Chrome, ho deciso di costruire le mia personale versione con navigazione migliorata, funzionalità extra e dark mode.`,
+    description: `Stanco del bookmarks manager di Google Chrome, ho deciso di costruire le mia personale versione con navigazione migliorata, funzionalità extra e dark mode. Work in progress.`,
     imgSrc: "pb.png",
     gitHub: "https://github.com/a-chris/peffect-bookmarks-manager",
     year: 2020,
@@ -111,16 +111,16 @@ export const PROJECTS = [
   //   year: 2020,
   //   technologies: ["Android", "Flutter", "Dart", "Java"],
   // },
-  // {
-  //   name: "Clear My Followings",
-  //   description:
-  //     "Un modo più comodo di gestire i followings su Reddit. Forse un giorno arriverà anche la gestione di Twitter.",
-  //   imgSrc: "cmf.png",
-  //   link: "https://www.clearmyfollowings.xyz",
-  //   gitHub: "",
-  //   year: 2020,
-  //   technologies: ["React", "Typescript", "Reddit API"],
-  // },
+  {
+    name: "Clear My Followings",
+    description:
+      "Un modo più comodo di gestire i propri followings di Reddit. Forse un giorno arriverà anche la gestione dei followings di Twitter.",
+    imgSrc: "cmf.png",
+    link: "https://www.clearmyfollowings.xyz",
+    gitHub: "https://github.com/a-chris/clear-my-followings",
+    year: 2020,
+    technologies: ["React", "Typescript", "Reddit API"],
+  },
   // {
   //   name: "Eurostreaming bot telegram",
   //   description: "Il sito piu bello del mondo intero",
@@ -130,13 +130,13 @@ export const PROJECTS = [
   //   year: 2020,
   //   technologies: ["Telegram", "Kotlin"],
   // },
-  // {
-  //   name: "Medium No Thanks",
-  //   description:
-  //     "Applicazione Android che permette di leggere gratuitamente tutti gli articoli di medium.com simulando la navigazione anonima.",
-  //   imgSrc: "https://via.placeholder.com/500",
-  //   gitHub: "",
-  //   year: 2020,
-  //   technologies: ["Android", "Kotlin"],
-  // },
+  {
+    name: "Medium No Thanks",
+    description:
+      "Applicazione Android per leggere gratuitamente tutti gli articoli di medium.com simulando la navigazione anonima.",
+    imgSrc: "mnt.png",
+    gitHub: "https://github.com/a-chris/medium-no-thanks",
+    year: 2020,
+    technologies: ["Android", "Kotlin"],
+  },
 ];

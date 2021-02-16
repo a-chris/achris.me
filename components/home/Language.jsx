@@ -13,7 +13,7 @@ export default function Language({ language }) {
 const LanguageDiv = styled.div`
   margin: 0 10px 10px 10px;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     margin: 0;
   }
 `;
@@ -21,13 +21,13 @@ const LanguageDiv = styled.div`
 const LanguageIcon = styled.img`
   width: 70px;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     transition: filter 0.5s;
-    filter: grayscale(100%);
+    // filter: grayscale(100%);
 
-    &:hover {
-      filter: grayscale(0);
-    }
+    // &:hover {
+    //   filter: grayscale(0);
+    // }
   }
 `;
 

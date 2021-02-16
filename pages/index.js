@@ -55,7 +55,7 @@ const FrontDescription = styled.p`
   line-height: 1.7;
   margin: 50px 20px;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     font-size: 22px;
     margin: 100px 50px;
   }

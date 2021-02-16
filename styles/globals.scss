@@ -27,9 +27,9 @@ h3 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 15px;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     font-size: 17px;
   }
 }
@@ -44,7 +44,7 @@ p {
   }
 
   .timeline-item-title {
-    @media (min-width: 400px) {
+    @media (min-width: 450px) {
       font-size: medium;
     }
   }
@@ -52,7 +52,7 @@ p {
   .card-title {
     padding-left: 0;
 
-    @media (min-width: 400px) {
+    @media (min-width: 450px) {
       font-size: large;
     }
   }
@@ -76,7 +76,7 @@ p {
 
     padding: 12px !important;
 
-    @media (min-width: 400px) {
+    @media (min-width: 450px) {
       padding: 20px !important;
     }
   }

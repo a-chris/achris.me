@@ -52,7 +52,7 @@ export default function PageWrapper({ children }) {
 const SidebarDiv = styled.div`
   width: 100%;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     // fixed sidebar settings
     position: fixed;
     height: 100%;
@@ -67,7 +67,7 @@ const SidebarDiv = styled.div`
 `;
 
 const Main = styled.main`
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     // margin-left needed due to the fixed sidebar
     margin-left: 35%;
   }
@@ -75,8 +75,4 @@ const Main = styled.main`
 
 const ContentDiv = styled.main`
   padding: 0 5%;
-
-  @media (min-width: 1400px) {
-    padding: 0 15%;
-  }
 `;

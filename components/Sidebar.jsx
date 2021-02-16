@@ -59,7 +59,7 @@ const MyName = styled.h2`
 
   font-size: xx-large;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     font-size: xxx-large;
   }
 `;
@@ -68,7 +68,7 @@ const MyPicture = styled.img`
   width: 110px;
   border-radius: 100%;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     width: 180px;
     filter: grayscale(1);
     transition: filter 0.5s;
@@ -86,7 +86,7 @@ const ContactsDiv = styled.div`
 
   flex-direction: row;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     flex-direction: column;
   }
 
@@ -98,7 +98,7 @@ const ContactsDiv = styled.div`
 const StyledHtmlLink = styled.a`
   color: black;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     font-size: 24px;
   }
 `;

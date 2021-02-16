@@ -20,7 +20,7 @@ const SkillIcon = styled.img`
 `;
 
 const SkillName = styled.p`
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     font-size: 24px;
   }
 `;

@@ -21,9 +21,11 @@ export default function Project({
           width={800}
           height={600}
           layout="intrinsic"
+          quality={100}
+          priority
         />
       </div>
-      <ProjectContentDiv>
+      <ProjectContentDiv isOdd={isOdd}>
         <ProjectNameDiv>
           <ProjectTitle>{name}</ProjectTitle>
         </ProjectNameDiv>
@@ -68,7 +70,7 @@ const ProjectDiv = styled.div(({ isOdd }) => ({
   display: "flex",
   flexDirection: "column-reverse",
 
-  "@media(min-width: 400px)": {
+  "@media(min-width: 450px)": {
     margin: "60px 0",
   },
   "@media(min-width: 1200px)": {
@@ -76,7 +78,7 @@ const ProjectDiv = styled.div(({ isOdd }) => ({
   },
 }));
 
-const ProjectContentDiv = styled.div(() => ({
+const ProjectContentDiv = styled.div(({ isOdd }) => ({
   display: "flex",
   width: "100%",
   flexDirection: "column",
@@ -84,7 +86,7 @@ const ProjectContentDiv = styled.div(() => ({
   padding: "20px 0",
 
   "@media(min-width: 700px)": {
-    padding: "20px 40px",
+    padding: isOdd ? "20px 40px 20px 0" : "20px 0 20px 40px",
   },
 }));
 

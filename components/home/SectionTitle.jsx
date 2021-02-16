@@ -15,7 +15,7 @@ const SectionTitleDiv = styled.div`
 
   margin: 0 auto 20px auto;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     margin: 0 auto 40px auto;
   }
 `;
@@ -28,7 +28,7 @@ const SectionTitleText = styled.h3`
   padding: 5px 15px;
   font-size: medium;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     padding: 10px 30px;
     font-size: x-large;
   }

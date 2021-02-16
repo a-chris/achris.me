@@ -10,7 +10,7 @@
 
   flex-direction: column;
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     flex-direction: row;
   }
 }
@@ -25,7 +25,7 @@
     padding: 0 20%;
   }
 
-  @media (min-width: 400px) {
+  @media (min-width: 450px) {
     padding: 0 10%;
   }
 }

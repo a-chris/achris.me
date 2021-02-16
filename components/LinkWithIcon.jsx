@@ -31,7 +31,7 @@ const StyledHtmlLink = styled.a(({ fontSize }) => ({
   color: "black",
   margin: "3px 0",
 
-  "@media (min-width: 400px)": {
+  "@media (min-width: 450px)": {
     fontSize: fontSize || "24px",
   },
 }));
@@ -40,7 +40,7 @@ const Icon = styled.img(({ position }) => ({
   width: "20px",
   margin: "0 3px",
 
-  "@media (min-width: 400px)": {
+  "@media (min-width: 450px)": {
     width: "30px",
     margin: position === "before" ? "0 12px 0 0" : "0 0 0 12px",
   },

@@ -14,7 +14,7 @@ export default function FadeIn({ children }) {
   const intersection = useIntersection(intersectionRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.3, // triggered when 1/3 of the element is visible
+    threshold: 0.2, // triggered when 1/3 of the element is visible
   });
 
   const isVisible = useMemo(
