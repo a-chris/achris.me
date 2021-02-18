@@ -38,29 +38,3 @@ export default function useLanguage() {
 
   return { t, language, setLanguage: updateLanguage };
 }
-// const useGlobalValue = createGlobalState("it");
-
-// export default function useLanguage() {
-//   const [language, setLanguage] = useGlobalValue();
-
-//   useEffect(() => setLanguage(navigator.language.substring(0, 2)), []);
-
-//   useEffect(() => localStorage.setItem("lang", language), [language]);
-
-//   const t = useCallback(
-//     (keyString) => {
-//       console.log(language);
-//       switch (language) {
-//         case "it":
-//           return it[keyString] || common[keyString] || "";
-//         case "en":
-//           return en[keyString] || common[keyString] || "";
-//         default:
-//           return "";
-//       }
-//     },
-//     [language]
-//   );
-
-//   return { t, language, setLanguage };
-// }

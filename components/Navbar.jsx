@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const toggleLanguage = useCallback(
     () => setLanguage(language === "it" ? "en" : "it"),
-    [setLanguage]
+    [language]
   );
 
   return (
