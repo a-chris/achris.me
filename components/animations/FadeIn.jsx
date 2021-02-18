@@ -22,7 +22,6 @@ export default function FadeIn({ children }) {
     [intersection]
   );
 
-  console.log("TCL ~ file: FadeIn.jsx ~ line 27 ~ intersection", intersection);
   useEffect(() => {
     if (!show && isVisible) {
       // animate only the first time

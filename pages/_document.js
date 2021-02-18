@@ -1,11 +1,11 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import { MY_NAME } from "../contents";
+import common from "../public/static/locales/common";
 
 export default class CustomDocument extends Document {
   render() {
     return (
       <Html lang="it">
-        <Head title={MY_NAME}>
+        <Head title={common.MY_NAME}>
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"

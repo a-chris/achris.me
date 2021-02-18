@@ -5,29 +5,31 @@ import SectionTitle from "../components/home/SectionTitle";
 import Skill from "../components/home/Skill";
 import Timeline from "../components/home/Timeline";
 import PageWrapper from "../components/PageWrapper";
-import { FRONT_DESCRIPTION, LANGUAGES, SKILLS } from "../contents";
+import useLanguage from "../hooks/useLanguage";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <PageWrapper>
       <FadeIn>
         <Section>
-          <FrontDescription>{FRONT_DESCRIPTION}</FrontDescription>
+          <FrontDescription>{t("FRONT_DESCRIPTION")}</FrontDescription>
         </Section>
       </FadeIn>
 
       <FadeIn>
         <Section>
-          <SectionTitle text="Il mio percorso" />
+          <SectionTitle text={t("TITLE_STORY")} />
           <Timeline />
         </Section>
       </FadeIn>
 
       <FadeIn>
         <Section>
-          <SectionTitle text="Competenze" />
+          <SectionTitle text={t("TITLE_SKILLS")} />
           <SkillsDiv>
-            {SKILLS.map((s, index) => (
+            {t("SKILLS").map((s, index) => (
               <Skill key={index} {...s} />
             ))}
           </SkillsDiv>
@@ -36,9 +38,9 @@ export default function Home() {
 
       <FadeIn>
         <Section>
-          <SectionTitle text="Linguaggi di programmazione" />
+          <SectionTitle text={t("TITLE_LANGUAGES")} />
           <LanguagesDiv>
-            {LANGUAGES.map((lang, index) => (
+            {t("LANGUAGES").map((lang, index) => (
               <Language key={index} language={lang} />
             ))}
           </LanguagesDiv>

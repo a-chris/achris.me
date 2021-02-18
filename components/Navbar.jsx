@@ -2,23 +2,41 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useCallback } from "react";
+import useLanguage from "../hooks/useLanguage";
 import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
 import Divider from "./Divider";
 
+const LANGUAGES_FLAGS = {
+  it: "flag_italy.svg",
+  en: "flag_uk.svg",
+};
+
 export default function Navbar() {
   const router = useRouter();
+  const { t, language, setLanguage } = useLanguage();
+
+  const flagIcon = LANGUAGES_FLAGS[language];
+
+  const toggleLanguage = useCallback(
+    () => setLanguage(language === "it" ? "en" : "it"),
+    [setLanguage]
+  );
 
   return (
     <NavbarDiv>
       <NavbarLinksDiv>
+        <NavbarLanguageFlag
+          src={`/resources/icons/${flagIcon}`}
+          onClick={toggleLanguage}
+        />
         <NavbarLink
           text="HOME"
           href="/"
           isCurrentPage={router.pathname === "/"}
         />
         <NavbarLink
-          text="PROGETTI"
+          text={t("NAVBAR_PROJECTS")}
           href="/projects"
           isCurrentPage={router.pathname === "/projects"}
         />
@@ -45,6 +63,13 @@ const NavbarDiv = styled.div`
 
   @media (min-width: 450px) {
     padding: 0 30px;
+  }
+`;
+
+const NavbarLanguageFlag = styled.img`
+  width: 30px;
+  &:hover {
+    cursor: pointer;
   }
 `;
 

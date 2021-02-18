@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { MY_NAME } from "../contents";
+import useLanguage from "../hooks/useLanguage";
 import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
 import LinkWithIcon from "./LinkWithIcon";
 
@@ -26,12 +26,15 @@ const CONTACTS = [
 ];
 
 export default function Sidebar() {
+  const { t } = useLanguage();
   return (
     <SidebarDiv>
       <MyName>
-        {MY_NAME.split(" ").map((word, index) => (
-          <div key={index}>{word}</div>
-        ))}
+        {t("MY_NAME")
+          .split(" ")
+          .map((word, index) => (
+            <div key={index}>{word}</div>
+          ))}
       </MyName>
       <MyPicture src="resources/my_pic.png" />
       <ContactsDiv>
@@ -55,6 +58,8 @@ const SidebarDiv = styled.div`
 `;
 
 const MyName = styled.h2`
+  letter-spacing: 3px;
+  text-transform: uppercase;
   text-align: center;
 
   font-size: xx-large;
@@ -93,16 +98,4 @@ const ContactsDiv = styled.div`
   & > * {
     margin: 6px;
   }
-`;
-
-const StyledHtmlLink = styled.a`
-  color: black;
-
-  @media (min-width: 450px) {
-    font-size: 24px;
-  }
-`;
-
-const ContactLinkIcon = styled.img`
-  width: 20px;
 `;

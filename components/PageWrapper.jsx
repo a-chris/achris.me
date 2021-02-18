@@ -2,12 +2,13 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { MY_NAME } from "../contents";
+import useLanguage from "../hooks/useLanguage";
 import styles from "../styles/Home.module.scss";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
 export default function PageWrapper({ children }) {
+  const { t } = useLanguage();
   const [isMounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function PageWrapper({ children }) {
   return (
     <div className={styles.root}>
       <Head>
-        <title>{MY_NAME}</title>
+        <title>{t("MY_NAME")}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -70,6 +71,10 @@ const Main = styled.main`
   @media (min-width: 450px) {
     // margin-left needed due to the fixed sidebar
     margin-left: 35%;
+  }
+
+  @media (min-width: 1400px) {
+    margin-left: 30%;
   }
 `;
 

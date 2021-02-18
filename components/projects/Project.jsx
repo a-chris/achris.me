@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import useLanguage from "../../hooks/useLanguage";
 import LinkWithIcon from "../LinkWithIcon";
 
 export default function Project({
@@ -13,6 +14,8 @@ export default function Project({
   gitHub,
   isOdd,
 }) {
+  const { t } = useLanguage();
+
   return (
     <ProjectDiv isOdd={isOdd}>
       <div style={{ margin: "auto" }}>
@@ -32,7 +35,7 @@ export default function Project({
         {gitHub && (
           <LinkWithIcon
             href={gitHub}
-            text="Visita su GitHub"
+            text={t("GITHUB_LINK")}
             icon="resources/icons/github.svg"
             iconPosition="before"
             fontSize="18px"
