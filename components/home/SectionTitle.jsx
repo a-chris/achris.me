@@ -12,6 +12,7 @@ export default function SectionTitle({ text }) {
 const SectionTitleDiv = styled.div`
   width: fit-content;
   border: 2px solid black;
+  background-color: white;
 
   margin: 0 auto 20px auto;
 
