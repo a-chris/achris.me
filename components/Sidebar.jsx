@@ -23,6 +23,12 @@ const CONTACTS = [
     icon: "resources/icons/medium.svg",
     iconPosition: "before",
   },
+  {
+    href: "mailto:a.christian.toscano@gmail.com",
+    text: "E-mail",
+    icon: "resources/icons/email.svg",
+    iconPosition: "before",
+  },
 ];
 
 export default function Sidebar() {
