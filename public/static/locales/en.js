@@ -4,8 +4,7 @@ module.exports = {
   GITHUB_LINK: "Visit on GitHub",
   NAVBAR_PROJECTS: "PROJECTS",
   FRONT_DESCRIPTION: `Hello! I'm Christian, I'm 24 years old, very curious and an IT enthusiast.
-  I love to stay up to date with technologies to build a set of skills that allows to solve any tipe of problem.
-  I'm looking for a company in which I can grow to make the difference.`,
+  I love to stay up to date with technologies to build a set of skills that allows to solve any tipe of problem.`,
   TITLE_STORY: "My story",
   TITLE_SKILLS: "Skills",
   TITLE_LANGUAGES: "Programming languages",
@@ -31,7 +30,19 @@ module.exports = {
   ],
   TIMELINE: [
     {
-      title: "October 2020 - now",
+      title: "March 2021 - now",
+      cardTitle: (
+        <LinkWithIcon
+          text="Extendi"
+          href="https://www.extendi.it/"
+          icon="resources/icons/link.svg"
+          iconPosition="after"
+        />
+      ),
+      content: ["Backend Developer"],
+    },
+    {
+      title: "October 2020 - March 2021",
       cardTitle: (
         <LinkWithIcon
           text="Lab51 srl"
@@ -88,7 +99,7 @@ module.exports = {
       As of today the database counts 1k of ingredients and 20k of different combinations.`,
       imgSrc: "rf.png",
       link: "https://www.rossofragola.it",
-      gitHub: "",
+      gitHub: "https://github.com/a-chris/rossofragola",
       year: 2020,
       technologies: [
         "React",

@@ -4,8 +4,7 @@ module.exports = {
   GITHUB_LINK: "Visita su GitHub",
   NAVBAR_PROJECTS: "PROGETTI",
   FRONT_DESCRIPTION: `Ciao! Io sono Christian, ho 24 anni, sono estremamente curioso e appassionato di informatica in ogni sua forma. 
-  Mi piace essere aggiornato sulle nuove tecnologie per avere un bagaglio di conoscenze che mi permetta di risolvere ogni tipo di problema. 
-  Sto cercando un'azienda in cui poter crescere e fare la differenza.`,
+  Mi piace essere aggiornato sulle nuove tecnologie per avere un bagaglio di conoscenze che mi permetta di risolvere ogni tipo di problema.`,
   TITLE_STORY: "Il mio percorso",
   TITLE_SKILLS: "Competenze",
   TITLE_LANGUAGES: "Linguaggi di programmazione",
@@ -27,7 +26,19 @@ module.exports = {
   ],
   TIMELINE: [
     {
-      title: "Ottobre 2020 - Attuale",
+      title: "Marzo 2021 - Attuale",
+      cardTitle: (
+        <LinkWithIcon
+          text="Extendi"
+          href="https://www.extendi.it/"
+          icon="resources/icons/link.svg"
+          iconPosition="after"
+        />
+      ),
+      content: ["Backend Developer"],
+    },
+    {
+      title: "Ottobre 2020 - Marzo 2021",
       cardTitle: (
         <LinkWithIcon
           text="Lab51 srl"
@@ -84,7 +95,7 @@ module.exports = {
     Ad oggi il database contiene quasi mille ingredienti e 20mila diverse combinazioni.`,
       imgSrc: "rf.png",
       link: "https://www.rossofragola.it",
-      gitHub: "",
+      gitHub: "https://github.com/a-chris/rossofragola",
       year: 2020,
       technologies: [
         "React",
