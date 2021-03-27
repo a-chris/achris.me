@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import useLanguage from "../hooks/useLanguage";
-import styles from "../styles/Home.module.scss";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
@@ -16,13 +15,13 @@ export default function PageWrapper({ children }) {
   }, []);
 
   return (
-    <div className={styles.root}>
+    <RootDiv>
       <Head>
         <title>{t("MY_NAME")}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.container}>
+      <PageContainerDiv>
         <SidebarDiv>
           <motion.div
             style={{ height: "inherit", boxShadow: "0px 0px 18px -3px black" }}
@@ -38,17 +37,35 @@ export default function PageWrapper({ children }) {
           </motion.div>
         </SidebarDiv>
 
-        <Main className={styles.main}>
+        <Main>
           <Navbar />
 
           <ContentDiv>{children}</ContentDiv>
         </Main>
-      </div>
+      </PageContainerDiv>
 
-      <footer className={styles.footer}></footer>
-    </div>
+      <footer />
+    </RootDiv>
   );
 }
+
+const RootDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const PageContainerDiv = styled.div`
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+
+  flex-direction: column;
+
+  @media (min-width: 450px) {
+    flex-direction: row;
+  }
+`;
 
 const SidebarDiv = styled.div`
   width: 100%;
@@ -68,6 +85,8 @@ const SidebarDiv = styled.div`
 `;
 
 const Main = styled.main`
+  height: 100%;
+
   @media (min-width: 450px) {
     // margin-left needed due to the fixed sidebar
     margin-left: 35%;
