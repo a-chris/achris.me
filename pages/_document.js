@@ -6,7 +6,6 @@ export default class CustomDocument extends Document {
     return (
       <Html lang="it">
         <Head title={common.MY_NAME}>
-          <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"
             href="/fonts/Inconsolata.ttf"
@@ -14,6 +13,8 @@ export default class CustomDocument extends Document {
             type="font/ttf"
             crossOrigin=""
           />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="manifest" href="/site.webmanifest" />
         </Head>
         <body>
           <Main />

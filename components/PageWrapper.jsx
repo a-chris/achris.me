@@ -19,6 +19,7 @@ export default function PageWrapper({ children }) {
       <Head>
         <title>{t("MY_NAME")}</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
       <PageContainerDiv>
