@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 import useTranslation from "../hooks/useTranslation";
+import breakpoints from "../styles/breakpoints";
 import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
 import LinkWithIcon from "./LinkWithIcon";
 
@@ -70,7 +71,7 @@ const MyName = styled.h2`
 
   font-size: xx-large;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     font-size: xxx-large;
   }
 `;
@@ -79,7 +80,7 @@ const MyPicture = styled.img`
   width: 110px;
   border-radius: 100%;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     width: 180px;
     filter: grayscale(1);
     transition: filter 0.5s;
@@ -97,7 +98,7 @@ const ContactsDiv = styled.div`
 
   flex-direction: row;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     flex-direction: column;
   }
 

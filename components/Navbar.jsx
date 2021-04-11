@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useCallback } from "react";
 import useTranslation from "../hooks/useTranslation";
+import breakpoints from "../styles/breakpoints";
 import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
 import Divider from "./Divider";
 
@@ -61,7 +62,7 @@ function NavbarLink({ text, href, isCurrentPage }) {
 const NavbarDiv = styled.div`
   padding: 0 10px;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     padding: 0 30px;
   }
 `;
@@ -79,9 +80,9 @@ const NavbarLinksDiv = styled.div`
   align-items: center;
 
   justify-content: center;
-  height: 50px;
+  height: 60px;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     justify-content: flex-end;
     height: 80px;
   }
@@ -95,7 +96,7 @@ const StyledHtmlLink = styled.a(({ isCurrentPage }) => ({
 
   fontSize: "20px",
 
-  "@media (min-width: 450px)": {
+  [breakpoints.sm]: {
     fontSize: "24px",
   },
 }));

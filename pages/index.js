@@ -57,12 +57,12 @@ const FrontDescription = styled.p`
   line-height: 1.7;
   margin: 50px 20px;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     font-size: 22px;
     margin: 100px 50px;
   }
 
-  @media (min-width: 1400px) {
+  ${breakpoints.xlg} {
     line-height: 2;
     margin: 100px 100px;
   }

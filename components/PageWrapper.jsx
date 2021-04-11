@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import useTranslation from "../hooks/useTranslation";
+import breakpoints from "../styles/breakpoints";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
@@ -63,7 +64,7 @@ const PageContainerDiv = styled.div`
 
   flex-direction: column;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     flex-direction: row;
   }
 `;
@@ -71,7 +72,7 @@ const PageContainerDiv = styled.div`
 const SidebarDiv = styled.div`
   width: 100%;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     // fixed sidebar settings
     position: fixed;
     height: 100%;
@@ -80,7 +81,7 @@ const SidebarDiv = styled.div`
     left: 0;
   }
 
-  @media (min-width: 1400px) {
+  ${breakpoints.xlg} {
     width: 30%;
   }
 `;
@@ -88,12 +89,12 @@ const SidebarDiv = styled.div`
 const Main = styled.main`
   height: 100%;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     // margin-left needed due to the fixed sidebar
     margin-left: 35%;
   }
 
-  @media (min-width: 1400px) {
+  ${breakpoints.xlg} {
     margin-left: 30%;
   }
 `;

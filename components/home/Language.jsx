@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import breakpoints from "../../styles/breakpoints";
 
 export default function Language({ language }) {
   return (
@@ -13,7 +14,7 @@ export default function Language({ language }) {
 const LanguageDiv = styled.div`
   margin: 0 10px 10px 10px;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     margin: 0;
   }
 `;
@@ -21,7 +22,7 @@ const LanguageDiv = styled.div`
 const LanguageIcon = styled.img`
   width: 70px;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     transition: filter 0.5s;
     // filter: grayscale(100%);
 

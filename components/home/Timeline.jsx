@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import { Chrono } from "react-chrono";
 import useTranslation from "../../hooks/useTranslation";
+import breakpoints from "../../styles/breakpoints";
 
 const theme = {
   textColor: "black",
@@ -36,7 +37,7 @@ export default function Timeline() {
 }
 
 const TimelineDiv = styled.div`
-  @media (min-width: 1000px) {
+  ${breakpoints.lg} {
     margin-right: 10%;
   }
 `;

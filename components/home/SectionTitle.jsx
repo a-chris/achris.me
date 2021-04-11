@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import breakpoints from "../../styles/breakpoints";
 
 export default function SectionTitle({ text }) {
   return (
@@ -16,7 +17,7 @@ const SectionTitleDiv = styled.div`
 
   margin: 0 auto 20px auto;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     margin: 0 auto 40px auto;
   }
 `;
@@ -29,7 +30,7 @@ const SectionTitleText = styled.h3`
   padding: 5px 15px;
   font-size: medium;
 
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     padding: 10px 30px;
     font-size: x-large;
   }

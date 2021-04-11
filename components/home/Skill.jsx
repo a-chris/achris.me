@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import breakpoints from "../../styles/breakpoints";
 
 export default function Skill({ name, icon }) {
   return (
@@ -20,7 +21,7 @@ const SkillIcon = styled.img`
 `;
 
 const SkillName = styled.p`
-  @media (min-width: 450px) {
+  ${breakpoints.sm} {
     font-size: 24px;
   }
 `;

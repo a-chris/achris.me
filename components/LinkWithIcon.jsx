@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import React from "react";
+import breakpoints from "../styles/breakpoints";
 
 export default function LinkWithIcon({
   href,
@@ -31,7 +32,7 @@ const StyledHtmlLink = styled.a(({ fontSize }) => ({
   color: "black",
   margin: "3px 0",
 
-  "@media (min-width: 450px)": {
+  [breakpoints.sm]: {
     fontSize: fontSize || "24px",
   },
 }));
@@ -40,7 +41,7 @@ const Icon = styled.img(({ position }) => ({
   width: "20px",
   margin: "0 3px",
 
-  "@media (min-width: 450px)": {
+  [breakpoints.sm]: {
     width: "30px",
     margin: position === "before" ? "0 12px 0 0" : "0 0 0 12px",
   },

@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import useTranslation from "../../hooks/useTranslation";
+import breakpoints from "../../styles/breakpoints";
 import LinkWithIcon from "../LinkWithIcon";
+import ResponsiveProjectImage from "./ResponsiveProjectImage";
 
 export default function Project({
   name,
@@ -19,14 +21,7 @@ export default function Project({
   return (
     <ProjectDiv isOdd={isOdd}>
       <div style={{ margin: "auto" }}>
-        <ProjectImage
-          src={`/resources/projects/${imgSrc}`}
-          width={800}
-          height={600}
-          layout="intrinsic"
-          quality={100}
-          priority
-        />
+        <ResponsiveProjectImage imgSrc={imgSrc} />
       </div>
       <ProjectContentDiv isOdd={isOdd}>
         <ProjectNameDiv>
@@ -72,11 +67,12 @@ const ProjectTitle = styled.h3`
 const ProjectDiv = styled.div(({ isOdd }) => ({
   display: "flex",
   flexDirection: "column-reverse",
+  margin: "20px 0",
 
-  "@media(min-width: 450px)": {
-    margin: "60px 0",
+  [breakpoints.sm]: {
+    margin: "40px 0",
   },
-  "@media(min-width: 1200px)": {
+  [breakpoints.lg]: {
     flexDirection: isOdd ? "row-reverse" : "row",
   },
 }));
@@ -88,7 +84,7 @@ const ProjectContentDiv = styled.div(({ isOdd }) => ({
 
   padding: "20px 0",
 
-  "@media(min-width: 700px)": {
+  [breakpoints.md]: {
     padding: isOdd ? "20px 40px 20px 0" : "20px 0 20px 40px",
   },
 }));
