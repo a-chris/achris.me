@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
-import useLanguage from "../hooks/useLanguage";
+import useTranslation from "../hooks/useTranslation";
 import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
 import LinkWithIcon from "./LinkWithIcon";
 
@@ -32,7 +32,7 @@ const CONTACTS = [
 ];
 
 export default function Sidebar() {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   return (
     <SidebarDiv>
       <MyName>

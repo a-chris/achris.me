@@ -2,12 +2,12 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import useLanguage from "../hooks/useLanguage";
+import useTranslation from "../hooks/useTranslation";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
 export default function PageWrapper({ children }) {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   const [isMounted, setMounted] = useState(false);
 
   useEffect(() => {

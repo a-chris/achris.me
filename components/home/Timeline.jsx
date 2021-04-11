@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 import { Chrono } from "react-chrono";
-import useLanguage from "../../hooks/useLanguage";
+import useTranslation from "../../hooks/useTranslation";
 
 const theme = {
   textColor: "black",
@@ -12,7 +12,7 @@ const theme = {
 };
 
 export default function Timeline() {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <TimelineDiv>

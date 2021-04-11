@@ -5,10 +5,10 @@ import SectionTitle from "../components/home/SectionTitle";
 import Skill from "../components/home/Skill";
 import Timeline from "../components/home/Timeline";
 import PageWrapper from "../components/PageWrapper";
-import useLanguage from "../hooks/useLanguage";
+import useTranslation from "../hooks/useTranslation";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <PageWrapper>

@@ -6,7 +6,7 @@ import it from "../public/static/locales/it";
 
 const useGlobalValue = createGlobalState("it");
 
-export default function useLanguage() {
+export default function useTranslation() {
   const [language, setLanguage] = useGlobalValue();
 
   useEffect(() => {

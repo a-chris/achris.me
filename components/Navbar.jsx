@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useCallback } from "react";
-import useLanguage from "../hooks/useLanguage";
+import useTranslation from "../hooks/useTranslation";
 import UnderlineHoverAnimation from "./animations/UnderlineHoverAnimation";
 import Divider from "./Divider";
 
@@ -14,7 +14,7 @@ const LANGUAGES_FLAGS = {
 
 export default function Navbar() {
   const router = useRouter();
-  const { t, language, setLanguage } = useLanguage();
+  const { t, language, setLanguage } = useTranslation();
 
   const flagIcon = LANGUAGES_FLAGS[language];
 

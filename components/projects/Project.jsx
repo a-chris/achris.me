@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import useLanguage from "../../hooks/useLanguage";
+import useTranslation from "../../hooks/useTranslation";
 import LinkWithIcon from "../LinkWithIcon";
 
 export default function Project({
@@ -14,7 +14,7 @@ export default function Project({
   gitHub,
   isOdd,
 }) {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <ProjectDiv isOdd={isOdd}>
