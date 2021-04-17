@@ -6,6 +6,7 @@ import Skill from "../components/home/Skill";
 import Timeline from "../components/home/Timeline";
 import PageWrapper from "../components/PageWrapper";
 import useTranslation from "../hooks/useTranslation";
+import breakpoints from "../styles/breakpoints";
 
 export default function Home() {
   const { t } = useTranslation();
