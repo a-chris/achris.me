@@ -21,15 +21,7 @@ export default function ResponsiveProjectImage({ imgSrc }) {
   const bp = useBreakpoint();
 
   const width = widths[bp];
-  console.log(
-    "TCL ~ file: ResponsiveProjectImage.jsx ~ line 18 ~ width",
-    width
-  );
   const height = (3 / 4) * width;
-  console.log(
-    "TCL ~ file: ResponsiveProjectImage.jsx ~ line 19 ~ height",
-    height
-  );
 
   return (
     <ProjectImage

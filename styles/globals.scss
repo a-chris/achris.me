@@ -93,3 +93,37 @@ p {
     width: 60%;
   }
 }
+
+/* Carousel */
+.carousel-root {
+  // margin: 0 30px;
+
+  .carousel {
+    .thumbs-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      
+      .thumb {
+        padding: 0px;
+        padding-inline-start: 0px;
+        border-radius: 2px;
+      }
+    }
+
+
+    .slide {
+      img {
+        border-radius: 5px;
+        padding: 30px
+      }
+      
+      &.selected {
+        img {
+          transition: padding 1s;
+          padding: 0px
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ import React from "react";
 import useTranslation from "../../hooks/useTranslation";
 import breakpoints from "../../styles/breakpoints";
 import LinkWithIcon from "../LinkWithIcon";
-import ResponsiveProjectImage from "./ResponsiveProjectImage";
+import ProjectCarousel from "./ProjectCarousel";
 
 export default function Project({
   name,
@@ -20,9 +20,7 @@ export default function Project({
 
   return (
     <ProjectDiv isOdd={isOdd}>
-      <div style={{ margin: "auto" }}>
-        <ResponsiveProjectImage imgSrc={imgSrc} />
-      </div>
+      <ProjectCarousel images={[imgSrc]} />
       <ProjectContentDiv isOdd={isOdd}>
         <ProjectNameDiv>
           <ProjectTitle>{name}</ProjectTitle>
@@ -72,9 +70,9 @@ const ProjectDiv = styled.div(({ isOdd }) => ({
   [breakpoints.sm]: {
     margin: "40px 0",
   },
-  [breakpoints.lg]: {
-    flexDirection: isOdd ? "row-reverse" : "row",
-  },
+  // [breakpoints.lg]: {
+  //   flexDirection: isOdd ? "row-reverse" : "row",
+  // },
 }));
 
 const ProjectContentDiv = styled.div(({ isOdd }) => ({
@@ -84,9 +82,9 @@ const ProjectContentDiv = styled.div(({ isOdd }) => ({
 
   padding: "20px 0",
 
-  [breakpoints.md]: {
-    padding: isOdd ? "20px 40px 20px 0" : "20px 0 20px 40px",
-  },
+  // [breakpoints.md]: {
+  //   padding: isOdd ? "20px 40px 20px 0" : "20px 0 20px 40px",
+  // },
 }));
 
 const ProjectNameDiv = styled.div`
@@ -99,6 +97,7 @@ const ProjectImage = styled(Image)`
 
 const ProjectDescription = styled.p`
   line-height: 1.7;
+  text-align: justify;
 `;
 
 const TechnologiesDiv = styled.div`
