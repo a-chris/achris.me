@@ -84,7 +84,6 @@ p {
   .vertical-item-row {
     & > div:first-child {
       //  left title of timeline
-
       width: 30%;
     }
   }
@@ -96,32 +95,49 @@ p {
 
 /* Carousel */
 .carousel-root {
-  // margin: 0 30px;
+  margin: 0 10px;
+  @media (min-width: 750px) {
+    margin: 0 30px;
+  }
+  @media (min-width: 1000px) {
+    margin: 0 50px;
+  }
 
   .carousel {
     .thumbs-wrapper {
       display: flex;
       justify-content: center;
       margin: 0;
-      
+
+      .thumbs {
+        padding-inline-start: 0px;
+      }
+
       .thumb {
         padding: 0px;
-        padding-inline-start: 0px;
         border-radius: 2px;
+        margin-right: 0px;
+
+        &:not(:first) {
+          margin-left: 6px;
+        }
+
+        @media (max-width: 750px) {
+          width: 40px !important;
+        }
       }
     }
-
 
     .slide {
       img {
         border-radius: 5px;
-        padding: 30px
+        padding: 30px;
       }
-      
+
       &.selected {
         img {
           transition: padding 1s;
-          padding: 0px
+          padding: 0px;
         }
       }
     }
