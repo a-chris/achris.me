@@ -84,7 +84,7 @@ module.exports = {
     {
       name: "Peffect Bookmarks",
       description: `Stanco del bookmarks manager di Google Chrome, ho deciso di costruire le mia personale versione con navigazione migliorata, funzionalità extra e dark mode. Work in progress.`,
-      imgSrc: "pb.png",
+      imgSrc: ["pb.png"],
       gitHub: "https://github.com/a-chris/peffect-bookmarks-manager",
       year: 2020,
       technologies: ["React", "Redux", "Typescript", "Google Chrome extension"],
@@ -93,7 +93,7 @@ module.exports = {
       name: "Rosso Fragola",
       description: `Ho preso in prestito migliaia di ricette dai principali siti italiani con lo scopo di trovare nuovi ingredienti da abbinare i cibi di sempre. 
     Ad oggi il database contiene quasi mille ingredienti e 20mila diverse combinazioni.`,
-      imgSrc: "rf.png",
+      imgSrc: ["rf.png"],
       link: "https://www.rossofragola.it",
       gitHub: "https://github.com/a-chris/rossofragola",
       year: 2020,
@@ -118,7 +118,7 @@ module.exports = {
       name: "Clear My Followings",
       description:
         "Un modo più comodo di gestire i propri followings di Reddit. Forse un giorno arriverà anche la gestione dei followings di Twitter.",
-      imgSrc: "cmf.png",
+      imgSrc: ["cmf.png"],
       link: "https://www.clearmyfollowings.xyz",
       gitHub: "https://github.com/a-chris/clear-my-followings",
       year: 2020,
@@ -137,7 +137,7 @@ module.exports = {
       name: "Medium No Thanks",
       description:
         "Applicazione Android per leggere gratuitamente tutti gli articoli di medium.com simulando la navigazione anonima.",
-      imgSrc: "mnt.png",
+      imgSrc: ["mnt.png"],
       gitHub: "https://github.com/a-chris/medium-no-thanks",
       year: 2020,
       technologies: ["Android", "Kotlin"],

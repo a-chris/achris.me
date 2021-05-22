@@ -7,7 +7,7 @@ export default function ProjectCarousel({ images }) {
       showArrows
       infiniteLoop={images.length > 1}
       centerMode
-      centerSlidePercentage={80}
+      centerSlidePercentage={60}
       showStatus={false}
       showIndicators={false}
       transitionTime={1000}

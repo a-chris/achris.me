@@ -95,12 +95,18 @@ p {
 
 /* Carousel */
 .carousel-root {
-  margin: 0 10px;
+  max-width: 1000px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+
   @media (min-width: 750px) {
-    margin: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
   @media (min-width: 1000px) {
-    margin: 0 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .carousel {

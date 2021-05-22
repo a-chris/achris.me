@@ -14,8 +14,7 @@ module.exports = {
       icon: "website.svg",
     },
     {
-      name:
-        "Backend server and REST API built with Express.js, Spring MVC, Ktor, Vert.x",
+      name: "Backend server and REST API built with Express.js, Spring MVC, Ktor, Vert.x",
       icon: "cloud.svg",
     },
     {
@@ -88,7 +87,7 @@ module.exports = {
     {
       name: "Peffect Bookmarks",
       description: `I wasn't happy with the Chrome Bookmarks Manager so I've built my own one with dark mode, better UI and black jack.`,
-      imgSrc: "pb.png",
+      imgSrc: ["pb.png"],
       gitHub: "https://github.com/a-chris/peffect-bookmarks-manager",
       year: 2020,
       technologies: ["React", "Redux", "Typescript", "Google Chrome extension"],
@@ -97,7 +96,7 @@ module.exports = {
       name: "Rosso Fragola",
       description: `I borrowed a few thousands of cooking recipes from the most important italian sites to find something new to cook.
       As of today the database counts 1k of ingredients and 20k of different combinations.`,
-      imgSrc: "rf.png",
+      imgSrc: ["rf.png"],
       link: "https://www.rossofragola.it",
       gitHub: "https://github.com/a-chris/rossofragola",
       year: 2020,
@@ -121,7 +120,7 @@ module.exports = {
     {
       name: "Clear My Followings",
       description: "",
-      imgSrc: "cmf.png",
+      imgSrc: ["cmf.png"],
       link: "https://www.clearmyfollowings.xyz",
       gitHub: "https://github.com/a-chris/clear-my-followings",
       year: 2020,
@@ -140,7 +139,7 @@ module.exports = {
       name: "Medium No Thanks",
       description:
         "Android application to freely read medium.com articles that works by emulating the browser anonymous navigation.",
-      imgSrc: "mnt.png",
+      imgSrc: ["mnt.png"],
       gitHub: "https://github.com/a-chris/medium-no-thanks",
       year: 2020,
       technologies: ["Android", "Kotlin"],

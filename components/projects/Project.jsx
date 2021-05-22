@@ -20,7 +20,6 @@ export default function Project({
 
   return (
     <ProjectDiv isOdd={isOdd}>
-      <ProjectCarousel images={[imgSrc]} />
       <ProjectContentDiv isOdd={isOdd}>
         <ProjectNameDiv>
           <ProjectTitle>{name}</ProjectTitle>
@@ -51,6 +50,7 @@ export default function Project({
             <Technology key={index}>{t}</Technology>
           ))}
         </TechnologiesDiv>
+        <ProjectCarousel images={imgSrc} />
       </ProjectContentDiv>
     </ProjectDiv>
   );
@@ -64,7 +64,7 @@ const ProjectTitle = styled.h3`
 
 const ProjectDiv = styled.div(({ isOdd }) => ({
   display: "flex",
-  flexDirection: "column-reverse",
+  // flexDirection: "column-reverse",
   margin: "20px 0",
 
   [breakpoints.sm]: {
